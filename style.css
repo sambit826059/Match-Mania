@@ -11,6 +11,15 @@ body {
     flex-direction: column;
     font-family: 'Griffy', sans-serif;
 }
+.banner {
+    display: flex;
+}
+#page-icon {
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    
+}
 h1 {
     font-family: 'Griffy', sans-serif;
     font-size: 50px;
