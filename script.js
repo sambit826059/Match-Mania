@@ -8,7 +8,7 @@ const cards = [
 let flippedCards = [];
 
 //function to shuffle the cards array
-var shuffleCards = () > {
+var shuffleCards = () => {
 
 };
 
