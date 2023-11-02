@@ -9,7 +9,11 @@ let flippedCards = [];
 
 //function to shuffle the cards array
 var shuffleCards = () => {
-
+    const cards = document.querySelectorAll(".card1");
+    cards.forEach(card => {
+        const randomPos = Math.floor(Math.random()*cards.length);
+        cards.style.order = randomPos;
+    });
 };
 
 //rendering gameboard
