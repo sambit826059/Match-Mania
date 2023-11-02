@@ -32,6 +32,30 @@ var renderBoard = () => {
 
         cardElement.appendChild(backImg);
         cardElement.appendChild(frontImg);
+
+        cardContainer.appendChild(cardElement);
+
+        //click event listner to each card
+        cardElement.addEventListener("click", ()=> {
+            if (flippedCards.length <2 && !card.isFlipped) {
+                flipCard (cardElement);
+                flippedCards.push(card);
+
+                if (flippedCards.length == 2) {
+                    if (checkmatch (flippedCards[0], flipCard[1])) {
+                        //match found
+                        flippedCards = [];
+                    }else {
+                        //no match.flip to default state
+                        setTimeout (() => {
+                            flipCard(flippedCards[0]);
+                            flipCard(flippedCards[1]);
+                            flippedCards = [];
+                        },1000);
+                    }
+                }
+            }
+        })
     })
 }
 
