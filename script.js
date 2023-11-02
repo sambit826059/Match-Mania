@@ -14,7 +14,7 @@ var shuffleCards = () => {
         const randomPos = Math.floor(Math.random()*cards.length);
         cards.style.order = randomPos;
     });
-};
+}
 
 //rendering gameboard
 var renderBoard = () => {
@@ -64,14 +64,16 @@ var renderBoard = () => {
 }
 
 //function to flip cards
-var flipCard = () => {
-
-};
+var flipCard = (cardElement) => {
+    const backImg = cardElement.querySelector(".back");
+    backImg.style.display = "block";
+    cardElement.classList.add("flipped");
+}
 
 //function to check if two cards match
 var checkmatch = () => {
 
-};
+}
 
 //shuffle the cards and render the initial gameboard
 shuffleCards(cards);
