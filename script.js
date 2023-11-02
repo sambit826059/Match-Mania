@@ -71,8 +71,8 @@ var flipCard = (cardElement) => {
 }
 
 //function to check if two cards match
-var checkmatch = () => {
-
+var checkmatch = (card1, card2) => {
+    return card1.id === card2.id;
 }
 
 //shuffle the cards and render the initial gameboard
